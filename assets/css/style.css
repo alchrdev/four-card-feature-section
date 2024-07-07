@@ -1,0 +1,152 @@
+:root {
+  --clr-section-border-red: hsl(0, 78%, 62%);
+  --clr-section-border-cyan: hsl(180, 62%, 55%);
+  --clr-section-border-orange: hsl(34, 97%, 64%);
+  --clr-section-border-blue: hsl(212, 86%, 64%);
+  --clr-very-dark-blue: hsl(234, 12%, 34%);
+  --clr-very-grayish-blue: hsl(229, 6%, 66%);
+  --clr-very-light-gray: hsl(0, 0%, 98%);
+  --fz-base: 0.9375rem;
+  --ff: 'Poppins', sans-serif;
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--fz-base);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff);
+  background-color: var(--clr-very-light-gray);
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding-block-end: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr; 
+  justify-items: center;
+  padding-inline: 2rem;
+  gap: 1.8rem;
+}
+
+.card__header {
+  padding-block: 2rem;
+}
+
+.card__tagline,
+.card__title,
+.card__subtitle {
+  margin-block-end: .5rem;
+  color: var(--clr-very-dark-blue);
+}
+
+.card__tagline,
+.card__title {
+  font-size: 1.4rem;
+}
+
+.card__tagline {
+  font-weight: var(--fw-200);
+}
+
+.card__title {
+  margin-block-start: 0;
+}
+
+.card__paragraph {
+  margin-block-start: 0;
+  color: var(--clr-very-grayish-blue);
+}
+
+.card__section {
+  border-radius: .5rem;
+  padding-block-start: 0;
+  padding-block-end: 2.5rem;
+  padding-inline: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  border-block-start: 4px solid transparent;
+  box-shadow: 0 8px 8px hsl(210 100% 40% / .1);
+}
+
+.card__icon {
+  align-self: end;
+}
+
+.card-supervisor {
+  border-block-start-color: var(--clr-section-border-cyan);
+}
+
+.card-team{
+  border-block-start-color: var(--clr-section-border-red);
+}
+
+.card-calculator {
+  border-block-start-color: var(--clr-section-border-blue);
+}
+
+.card-karma {
+  border-block-start-color: var(--clr-section-border-orange);
+}
+
+@media (min-width: 48em) {
+
+  .card {
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: 6rem;
+  }
+
+  .card__tagline,
+  .card__title {
+    font-size: 2.3rem;
+  }
+
+  .card__header {
+    grid-column: 1 / 4;
+    text-align: center;
+    padding-block: 2.5rem;
+  }
+
+  .card__paragraph {
+    max-width: 55ch;
+  }
+
+  .card-supervisor {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    place-self: center;
+  }
+
+  .card-team {
+    grid-column: 2 / 3;
+  }
+
+  .card-karma {
+    grid-column:  2 / 3;
+  }
+
+  .card-calculator {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    place-self: center;
+
+  }
+}
