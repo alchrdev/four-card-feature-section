@@ -6,6 +6,7 @@
   --clr-very-dark-blue: hsl(234, 12%, 34%);
   --clr-very-grayish-blue: hsl(229, 6%, 66%);
   --clr-very-light-gray: hsl(0, 0%, 98%);
+  --clr-very-white: hsl(0, 0%, 100%);
   --fz-base: 0.9375rem;
   --ff: 'Poppins', sans-serif;
   --fw-200: 200;
@@ -85,6 +86,7 @@ img {
   flex-direction: column;
   border-block-start: 4px solid transparent;
   box-shadow: 0 8px 8px hsl(210 100% 40% / .1);
+  background-color: var(--clr-very-white);
 }
 
 .card__icon {
